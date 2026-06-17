@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardiovascular Risk Prediction</title>
+</head>
+
+<body>
+    <h1>🫀 Cardiovascular Disease Prediction</h1>
+
+    <form action="/predict" method="post">
+
+        <input type="number" name="age" placeholder="Age" required><br>
+
+        <select name="gender" required>
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+        </select><br>
+
+        <input type="number" name="height" placeholder="Height (cm)" required><br>
+        <input type="number" name="weight" placeholder="Weight (kg)" required><br>
+
+        <input type="number" name="ap_hi" placeholder="Systolic BP" required><br>
+        <input type="number" name="ap_lo" placeholder="Diastolic BP" required><br>
+
+        <input type="number" name="cholesterol" placeholder="Cholesterol (1-3)" required><br>
+        <input type="number" name="gluc" placeholder="Glucose (1-3)" required><br>
+
+        <input type="number" name="smoke" placeholder="Smoking (0/1)" required><br>
+        <input type="number" name="alco" placeholder="Alcohol (0/1)" required><br>
+        <input type="number" name="active" placeholder="Active (0/1)" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
